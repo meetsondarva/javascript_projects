@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Sondarva - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #dfee9a;
+            color: #693030;
+            padding: 20px;
+            text-align: center;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .skills, .projects, .achievements {
+            margin-top: 20px;
+        }
+        .skills ul, .projects ul, .achievements ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li, .projects li, .achievements li {
+            margin-bottom: 8px;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meet Sondarva</h1>
+        <p>Email: <a href="mailto:mitsondarava@gmail.com">mitsondarava@gmail.com</a></p>
+        <p>
+            <a href="https://linkedin.com/in/meetsondarva" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/meetsondarva" target="_blank">GitHub</a>
+        </p>
+    </header>
+
+    <section>
+        <h2>Education</h2>
+        <p><strong>Parul Institute of Engineering and Technology, Vadodara</strong> - B.Tech in IT (CGPA 7.23)</p>
+        <p><strong>Royal Science School, Dhoraji</strong> - HSC, 58% (2022)</p>
+        <p><strong>Shree Parishram School, Bantwa</strong> - SSC, 67% (2020)</p>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Frontend Technology:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Backend Technology:</strong> Java, Python</li>
+            <li><strong>Tools:</strong> Git, GitHub, MongoDB, MySQL</li>
+        </ul>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <p><strong>Weather App</strong></p>
+        <p>A weather app that provides real-time weather details, including temperature, humidity, and severe weather warnings.</p>
+        <button onclick="toggleDetails()">Show/Hide Features</button>
+        <div id="project-details" class="hidden">
+            <ul>
+                <li>Helps plan daily activities with accurate weather updates.</li>
+                <li>Provides safety alerts for severe weather conditions.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="achievements">
+        <h2>Academic & Extracurricular Achievements</h2>
+        <ul>
+            <li>Infosys Springboard Certification in Database and SQL</li>
+            <li>Drone Boot Camp, NIT Surat</li>
+            <li>Contributor - Full Stack Bootcamp</li>
+        </ul>
+    </section>
+
+    <script src="resume.js">
+       
+    </script>
+</body>
+</html>
