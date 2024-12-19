@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ff9a8b, #ff6a88, #ff99ac);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            padding: 15px;
+            background: #f48c06;
+            color: #ffffff;
+            font-size: 1.8em;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        #players {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .player {
+            padding: 15px;
+            border-radius: 8px;
+            background: #6a0572;
+            color: #ffffff;
+            font-size: 1.2em;
+        }
+
+        #dice-container {
+            margin: 20px 0;
+        }
+
+        #dice {
+            width: 80px;
+            height: 80px;
+            margin: 10px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: #ffffff;
+            background: #c2e09e;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        #roll-result {
+            font-size: 1.2em;
+            color: #e63946;
+        }
+
+        #controls {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #roll-btn {
+            background: #4cc9f0;
+            color: #ffffff;
+        }
+
+        #reset-btn {
+            background: #7209b7;
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            #players {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .player {
+                font-size: 1em;
+            }
+
+            #controls {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Dice Game: Player 1 vs Player 2</h1>
+    </header>
+
+    <main>
+        <div id="players">
+            <div id="player1" class="player">
+                <h2>Player 1</h2>
+                <p>Score: <span id="score1">0</span></p>
+            </div>
+
+            <div id="player2" class="player">
+                <h2>Player 2</h2>
+                <p>Score: <span id="score2">0</span></p>
+            </div>
+        </div>
+
+        <div id="dice-container">
+            <div id="dice">🎲</div>
+            <p id="roll-result">Roll to start!</p>
+        </div>
+
+        <div id="controls">
+            <button id="roll-btn">Roll Dice</button>
+            <button id="reset-btn">New Game</button>
+        </div>
+    </main>
+
+    <script src="dice.js"></script>
+</body>
+
+</html>

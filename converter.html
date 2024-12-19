@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f4f4f4, #e4e6e7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #34495e;
+            font-size: 1.8em;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        label {
+            font-weight: bold;
+            color: #34495e;
+            font-size: 0.9rem;
+        }
+
+        select, input {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #ffffff;
+            background: #3498db;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            background: #2980b9;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+        }
+
+        #result {
+            margin-top: 1rem;
+            padding: 15px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            color: #2c3e50;
+            background: #ecf0f1;
+            border-left: 4px solid #3498db;
+            border-radius: 8px;
+        }
+
+        select option {
+            padding: 10px;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                width: 90%;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+        <form id="converterForm">
+            <label for="quantity">Choose a Quantity:</label>
+            <select id="quantity" onchange="updateUnits()">
+                <option value="" disabled selected>--Select--</option>
+                <option value="temperature">Temperature</option>
+                <option value="weight">Weight</option>
+                <option value="length">Length</option>
+                <option value="area">Area</option>
+                <option value="speed">Speed</option>
+            </select>
+
+            <label for="fromUnit">From:</label>
+            <select id="fromUnit">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+                <option value="kg">Kilograms</option>
+                <option value="pounds">Pounds</option>
+                <option value="meters">Meters</option>
+                <option value="kilometers">Kilometers</option>
+            </select>
+
+            <label for="toUnit">To:</label>
+            <select id="toUnit">
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="celsius">Celsius</option>
+                <option value="kelvin">Kelvin</option>
+                <option value="pounds">Pounds</option>
+                <option value="kg">Kilograms</option>
+                <option value="kilometers">Kilometers</option>
+                <option value="meters">Meters</option>
+            </select>
+
+            <input type="number" id="inputValue" placeholder="Enter value">
+            <button type="button" onclick="convert()">Convert</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="converter.js"></script>
+</body>
+</html>

@@ -3,40 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projects Portfolio</title>
     <style>
-           .box{
-            margin: auto;
-  width: 60%;
-  border: 3px solid #73AD21;
-  padding: 10px;
-           }   
-           h1,h2{
+        /* General Styling */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styling */
+        h1 {
             text-align: center;
-           }
+            color: #222;
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #f8f9fa;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+
+        tr:hover {
+            background-color: #e2e6ea;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Link/Button Styling */
+        .project-link {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .project-link:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            table th, table td {
+                font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>Projects</h1>
-        <hr>
-        <h2><li>
-            1. resume <a href="resume.html" target="_blank"> project_link</a>
-        </li>
-    </h2> 
-       <h2><li>
-            2. Feedback form <a href="feedback.html" target="_blank"> project_link</a>
-        </li>
-    </h2> 
-</h2> 
-<h2><li>
-     3. counter <a href="counter.html" target="_blank"> project_link</a>
- </li>
-</h2> 
-<h2><li>
-    4. 3D Geometric Calculator <a href="calculator.html" target="_blank"> project_link</a>
-</li>
-</h2> 
+    <div class="container">
+        <h1>Javascript Projects</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Project Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Resume</td>
+                    <td><a href="resume.html" target="_blank" class="project-link">View Project</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Feedback Form</td>
+                    <td><a href="feedback.html" target="_blank" class="project-link">View Project</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Counter</td>
+                    <td><a href="counter.html" target="_blank" class="project-link">View Project</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>3D Geometric Calculator</td>
+                    <td><a href="calculator.html" target="_blank" class="project-link">View Project</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Dice Game</td>
+                    <td><a href="dice.html" target="_blank" class="project-link">View Project</a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Physical Quantity Converter</td>
+                    <td><a href="converter.html" target="_blank" class="project-link">View Project</a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
