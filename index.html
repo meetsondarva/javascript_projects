@@ -5,99 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects Portfolio</title>
     <style>
-        /* General Styling */
         body {
             font-family: 'Roboto', Arial, sans-serif;
-            background: linear-gradient(to right, #ece9e6, #ffffff);
+            background: linear-gradient(135deg, #eef2f3, #556d68);
             margin: 0;
             padding: 20px;
-            color: #333;
         }
-
-        /* Container Styling */
         .container {
             max-width: 900px;
             margin: 0 auto;
             background: #ffffff;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
-
-        /* Header Styling */
         h1 {
             text-align: center;
-            color: #222;
-            font-size: 2.8rem;
-            margin-bottom: 30px;
-            font-weight: 700;
+            color: #444;
+            margin-bottom: 20px;
+            font-size: 2.2em;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
-
-        /* Table Styling */
         table {
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: #f8f9fa;
+            border-collapse: separate;
+            border-spacing: 0 10px;
         }
-
         th, td {
-            padding: 15px 20px;
-            text-align: left;
-            border-bottom: 2px solid #e9ecef;
+            padding: 15px;
+            text-align: center;
+            font-size: 1em;
         }
-
         th {
-            background-color: #007bff;
+            background-color: #7614b8;
             color: white;
-            font-size: 1.2rem;
-            text-transform: uppercase;
+            border-radius: 8px;
         }
-
-        tr:nth-child(even) {
-            background-color: #f1f1f1;
+        td {
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
         }
-
-        tr:hover {
-            background-color: #e2e6ea;
-            transition: background-color 0.3s ease;
+        tr:hover td {
+            background: #f1f5f8;
         }
-
-        /* Link/Button Styling */
         .project-link {
             display: inline-block;
-            padding: 10px 18px;
-            background: #007bff;
-            color: #ffffff;
+            padding: 10px 20px;
+            background: #0ac1ce;
+            color: white;
             text-decoration: none;
-            border-radius: 6px;
-            font-size: 1rem;
+            border-radius: 25px;
+            font-size: 14px;
             font-weight: bold;
-            text-transform: uppercase;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease;
         }
-
         .project-link:hover {
-            background: #0056b3;
+            background: #3d1ad8;
             transform: scale(1.05);
-        }
-
-        /* Media Queries for Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            table th, table td {
-                font-size: 0.9rem;
-                padding: 10px 15px;
-            }
-
-            h1 {
-                font-size: 2.2rem;
-            }
         }
     </style>
 </head>
@@ -142,6 +108,16 @@
                     <td>6</td>
                     <td>Physical Quantity Converter</td>
                     <td><a href="converter.html" target="_blank" class="project-link">View Project</a></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Number Guesser</td>
+                    <td><a href="randomguess.html" target="_blank" class="project-link">View Project</a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Password Generator</td>
+                    <td><a href="randompassword.html" target="_blank" class="project-link">View Project</a></td>
                 </tr>
             </tbody>
         </table>
