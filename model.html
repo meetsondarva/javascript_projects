@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification</title>
+
+    <!-- Include Required Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #3d354d, #64adc5);
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        /* Container with border and padding */
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 3px solid #ffffff; /* Full-side border */
+            border-radius: 15px; /* Rounded corners */
+            background-color: #ffffff20; /* Semi-transparent background */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+        }
+
+        /* Header styling */
+        h1 {
+            color: #f8f9fa;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* File input styling */
+        input[type="file"] {
+            margin: 20px 0;
+            padding: 10px;
+            border: 2px dashed #ffffff;
+            border-radius: 10px;
+            background: #ffffff10;
+            color: #ffffff;
+            font-size: 1rem;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="file"]:hover {
+            background: #ffffff20;
+        }
+
+        /* Button styling (updated) */
+        button {
+            padding: 12px 20px;
+            font-size: 1rem;
+            background-color: #28a745; /* Success green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        button:active {
+            transform: scale(0.98); /* Button shrink effect */
+        }
+
+        button:hover {
+            background-color: #218838; /* Darker green */
+        }
+
+        /* Result display */
+        #myResult {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            background-color: #ffffff20;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: 2px solid #ffffff; /* Border around result */
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Image display container */
+        #webcam-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* Image styling */
+        img {
+            margin-top: 20px;
+            border: 3px solid #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 240px;
+            max-height: 240px;
+        }
+
+        #myImage {
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Classification</h1>
+        <input type="file" id="imageUpload" accept="image/*">
+        <button id="classifyButton">Classify Image</button>
+        
+        <div id="myResult">Waiting for image...</div>
+        
+        <!-- Image Display Container -->
+        <div id="webcam-container">
+            <img id="myImage" src="" alt="Uploaded Image">
+        </div>
+    </div>
+
+    <script src="model.js"></script>
+</body>
+</html>
