@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Attendance System</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: lightsteelblue;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #0c0e0f;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* Container for the main content */
+        .content-container {
+            background-color: #5f58c7;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 700px;
+            margin-top: 20px;
+        }
+
+        /* Video Container */
+        .video-container {
+            margin-bottom: 20px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button Styling */
+        button {
+            padding: 12px 30px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #143ae4;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #000000;
+        }
+
+        /* Result Display */
+        #myResult {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Attendance List */
+        #studentList {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #040505;
+            list-style: none;
+            padding: 0;
+        }
+
+        #studentList li {
+            padding: 8px;
+            margin-bottom: 5px;
+            background-color: #f4f6f9;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .content-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            button {
+                width: 100%;
+                padding: 14px 30px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Student Attendance System</h1>
+
+        <!-- Video Feed -->
+        <div class="video-container">
+            <video id="webcam" autoplay playsinline></video>
+        </div>
+
+        <!-- Capture Button -->
+        <button id="captureButton">Capture & Classify</button>
+
+        <!-- Result Display -->
+        <div id="myResult">Waiting for capture...</div>
+
+        <!-- Student Attendance List -->
+        <ul id="studentList"></ul>
+    </div>
+
+    <script src="attendance.js"></script>
+</body>
+</html>
